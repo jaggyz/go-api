@@ -18,8 +18,8 @@ func getAddressBookAll(w http.ResponseWriter, r *http.Request) {
 	addBook := addressBook{
 		Firstname: "Arunee",
 		Lastname:  "Poonsawat",
-		Code:      2021,
-		Phone:     "0811070242",
+		Code:      2000,
+		Phone:     "+61x-xxxx-xxxx",
 	}
 	json.NewEncoder(w).Encode(addBook)
 }
@@ -30,7 +30,7 @@ func getPort() string {
 	var port = os.Getenv("PORT")
 	if port == "" {
 		port = "8080"
-		fmt.Println("No Port In Heroku" + port)
+		fmt.Println("No Port In Heroku " + port)
 	}
 	return ":" + port
 }
